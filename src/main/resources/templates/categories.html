@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr style="font-size: 13">
+			<th>ID</th>
+			<th>Name</th>
+		</tr>
+		<tr th:each="category:  ${categories}">
+			<td th:text="${category.id}" /></td>
+			<td><a th:href="@{'/products/category/'+ ${category.id}}"
+				th:text="@{'List products for '+ ${category.name}}"> </a></td>
+		</tr>
+	</table>
+	<p>
+		<a th:href="@{'/category/add'}"> Add Category</a>
+	</p>
+</body>
+</html>

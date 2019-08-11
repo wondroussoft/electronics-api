@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr style="font-size: 13">
+			<th>ID</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Brand</th>
+			<th>Version</th>
+
+		</tr>
+		<tr>
+			<td th:text="${product.id}" /></td>
+			<td th:text="${product.name}" /></td>
+			<td th:text="${product.description}" /></td>
+			<td th:text="${product.price}" /></td>
+			<td th:text="${product.brand}" /></td>
+			<td th:text="${product.version}" /></td>
+		</tr>
+	</table>
+</body>
+</html>
